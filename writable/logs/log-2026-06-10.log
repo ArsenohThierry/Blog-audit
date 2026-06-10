@@ -1,0 +1,53 @@
+ERROR - 2026-06-10 05:30:18 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/app/Controllers/Articles.php(15): CodeIgniter\BaseModel->findAll()
+#8 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/CodeIgniter.php(951): App\Controllers\Articles->index()
+#9 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/app/Controllers/Articles.php(15): CodeIgniter\BaseModel->findAll()
+#7 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/CodeIgniter.php(951): App\Controllers\Articles->index()
+#8 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/zenoh/S4/Rojo/blog-audit/codeigniter4/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-06-10 05:30:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Controllers/Articles.php(15): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Articles->index()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/zenoh/S4/Rojo/blog-audit/codeigniter4/public/index.php')
